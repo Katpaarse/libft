@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:39:22 by jukerste          #+#    #+#             */
-/*   Updated: 2025/02/12 15:21:06 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:12:17 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 # include <stddef.h>
 # include <stdarg.h>
 # include <fcntl.h>
+
+typedef struct 		s_list
+{
+	void			*content;
+	struct s_list	*next;	
+}					t_list;
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
