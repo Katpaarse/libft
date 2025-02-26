@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:39:22 by jukerste          #+#    #+#             */
-/*   Updated: 2025/02/25 17:31:23 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:15:25 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,10 @@ char	*get_next_line(int fd);
 char	*extract_line(char **line_buffer);
 char	*read_and_stash(int fd, char *leftover, char *buffer);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 #endif
