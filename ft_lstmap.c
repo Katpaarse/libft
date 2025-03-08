@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 13:58:02 by kat               #+#    #+#             */
-/*   Updated: 2025/03/08 15:57:53 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/08 16:11:18 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list = NULL;
+	t_list	*new_list;
 	t_list	*new_node;
 	void	*new_content;
 
+	new_list = NULL;
 	if (lst == NULL || f == NULL)
 		return (NULL);
 	while (lst != NULL)

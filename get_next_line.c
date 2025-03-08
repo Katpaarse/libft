@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:11:56 by jukerste          #+#    #+#             */
-/*   Updated: 2025/02/12 15:17:14 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:59:08 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,3 @@ char	*get_next_line(int fd)
 	leftover = extract_line(&line);
 	return (line);
 }
-
