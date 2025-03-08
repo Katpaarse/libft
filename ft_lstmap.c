@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 13:58:02 by kat               #+#    #+#             */
-/*   Updated: 2025/02/27 14:56:44 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:57:53 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst = lst->next;
 	}
 	return (new_list);
-}
-
-int main(void)
-{
-    t_list *new;
-    t_list *head;
-
-    head = ft_lstnew(strdup("hello"));
-    new = head;
-    new->next = ft_lstnew(strdup("world"));
-    new->next->next = ft_lstnew(strdup("how"));
-    new->next->next->next = ft_lstnew(strdup("are"));
-    new->next->next->next->next = ft_lstnew(strdup("you"));
-
-    printf("Original list:\n");
-    print_list(new);
-
-    // Map the function to the list
-    t_list *new_list = ft_lstmap(new, to_uppercase, del);
-
-    // Print the new list
-    printf("Mapped list:\n");
-    print_list(new_list);
-
-    // Free allocated memory
-    ft_lstclear(&new, del);
-    ft_lstclear(&new_list, del);
-
-    return 0;
 }
