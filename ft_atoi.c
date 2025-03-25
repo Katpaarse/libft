@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 20:00:59 by jukerste          #+#    #+#             */
-/*   Updated: 2024/10/30 15:56:25 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/25 16:18:47 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	num;
-	int	sign;
+	int		i;
+	long	num;
+	int		sign;
 
 	i = 0;
 	num = 0;
