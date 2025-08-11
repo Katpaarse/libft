@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:50:08 by jukerste          #+#    #+#             */
-/*   Updated: 2025/02/11 17:02:08 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/08/11 15:16:41 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(char const *s, int c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == chr)
 			return ((char *)s + i);

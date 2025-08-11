@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 19:33:20 by jukerste          #+#    #+#             */
-/*   Updated: 2024/10/30 15:59:08 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/08/11 15:17:53 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 
 	i = 0;
 	len = 0;
-	while (src[len] != '\0')
+	while (src[len])
 		len++;
 	if (destsize == 0)
 		return (len);
-	while (i < destsize - 1 && src[i] != '\0')
+	while (i < destsize - 1 && src[i])
 	{
 		dest[i] = src[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:04:27 by jukerste          #+#    #+#             */
-/*   Updated: 2024/10/30 15:58:17 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/08/11 15:11:21 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	count_words(char const *s, char c)
 	i = 0;
 	reset = 0;
 	words = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == c)
 			reset = 0;
@@ -63,10 +63,10 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (j < count_words(s, c))
 	{
-		while (s[i] != '\0' && s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 		start = i;
-		while (s[i] != '\0' && s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
 		array[j] = ft_substr(s, start, i - start);
 		if (array[j] == NULL)
